@@ -7,6 +7,8 @@ import {
 import Home from './pages/Home'
 import './App.css'
 import Header from './components/Header'
+import AptIndex from './pages/AptIndex'
+import { Nav, NavItem } from 'reactstrap'
 
 class App extends Component {
   render() {
@@ -25,8 +27,26 @@ class App extends Component {
     return(
       <Router>
         <Header />
+        <Nav>
+          {logged_in &&
+            <NavItem>
+              <a href={sign_out_route} className="nav-link">Sign Out</a>
+            </NavItem>
+          }
+          {!logged_in &&
+            <NavItem>
+              <a href={sign_in_route} className="nav-link">Sign In</a>
+            </NavItem>
+          }
+          {!logged_in &&
+            <NavItem>
+              <a href={new_user_route} className="nav-link">Sign Up</a>
+            </NavItem>
+          }
+        </Nav>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/AptIndex" component={AptIndex}/>
         </Switch>
       </Router>
     )

@@ -3,9 +3,14 @@
     background-color: #EEEDDE;
     text-align: center;
 }
-
 .header {
-text-align: center;
-padding: 2.0em;
-background-color: #E0DDAA;
+    text-align: center;
+    padding: 2.0em;
+    background-color: #E0DDAA;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
 }
