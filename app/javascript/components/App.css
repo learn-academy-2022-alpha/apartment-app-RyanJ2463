@@ -1,0 +1,11 @@
+.home {
+    height: 100vh;
+    background-color: #EEEDDE;
+    text-align: center;
+}
+
+.header {
+text-align: center;
+padding: 2.0em;
+background-color: #E0DDAA;
+}
