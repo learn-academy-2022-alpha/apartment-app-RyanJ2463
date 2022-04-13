@@ -4,7 +4,9 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-
+import Home from './pages/Home'
+import './App.css'
+import Header from './components/Header'
 
 class App extends Component {
   render() {
@@ -21,9 +23,12 @@ class App extends Component {
     console.log("sign_in_route:", sign_in_route)
     console.log("sign_out_route:", sign_out_route)
     return(
-      <>
-        <h1>Apartment App</h1>
-      </>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
     )
   }
 }
